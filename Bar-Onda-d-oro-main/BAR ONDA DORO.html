@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Onda d'oro | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fdfcfb;
+            margin: 0;
+            color: #4a332d;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #6f4e37;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 8px solid #c49a6c;
+        }
+
+        header h1 { margin: 0; font-size: 2.8rem; }
+        header p { font-style: italic; opacity: 0.9; margin-top: 10px; }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Sezione Galleria Immagini */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 250px; /* Aumentato leggermente per visibilità */
+            object-fit: cover; 
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        /* Menu Bottoni */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .btn-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            color: #6f4e37;
+            text-decoration: none;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #e2d1c3;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .btn-menu:hover {
+            background-color: #c49a6c;
+            color: white;
+            border-color: #c49a6c;
+            transform: translateY(-5px);
+        }
+
+        .icon { font-size: 2rem; margin-bottom: 10px; }
+
+        /* Footer (Orari e Social) */
+        footer {
+            background-color: #3e2723;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-section { margin: 20px; }
+        .footer-section h4 { border-bottom: 2px solid #c49a6c; padding-bottom: 10px; }
+        
+        .social-links a {
+            color: #c49a6c;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .social-links a:hover { color: white; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>☕ Bar Onda d'oro</h1>
+        <p>Benvenuti nel cuore del gusto</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="gallery">
+		<img src="Gemini_Generated_Image_b3dg2lb3dg2lb3dg.png" alt="interno" class="gallery-item">
+            <img src="Gemini_Generated_Image_uymla1uymla1uyml.png" alt="esterno Bar Onda d'Oro" class="gallery-item">
+            <img src="Gemini_Generated_Image_ql1lf6ql1lf6ql1l.png" alt="caffe" class="gallery-item">
+        </div>
+
+        <div class="menu-grid">
+            <a href="gasp_git.html" class="btn-menu">
+                <span class="icon">☕</span> Caffè
+            </a>
+            <a href="dolci.html" class="btn-menu">
+                <span class="icon">🥐</span> Dolci
+            </a>
+            <a href="aperitivi.html" class="btn-menu">
+                <span class="icon">🍹</span> Aperitivi
+            </a>
+            <a href="snack.html" class="btn-menu">
+                <span class="icon">🥪</span> Snack
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🕒 Orari</h4>
+                <p>Lun - Sab: 07:00 - 20:00<br>Domenica: 08:00 - 13:00</p>
+            </div>
+            <div class="footer-section">
+                <h4>📍 Dove siamo</h4>
+                <p>Via Napoli<br>Genzano di Roma (RM)</p>
+            </div>
+            <div class="footer-section">
+                <h4>📱 Seguici</h4>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Bar Onda d'oro - Tutti i diritti riservati</p>
+    </footer>
+
+</body>
+</html>
