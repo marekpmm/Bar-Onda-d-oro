@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Aperitivi & Snack - Onda d'Oro</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #fcfaf5; margin: 0; padding: 0; color: #4a3b2c; }
+        header { background-color: #8b5e3c; color: white; text-align: center; padding: 40px 0; border-bottom: 5px solid #d4c4b5; position: relative; }
+        
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 1px solid white;
+        }
+        .back-btn:hover { background-color: white; color: #8b5e3c; }
+
+        .container { width: 95%; max-width: 1100px; margin: 30px auto; display: grid; grid-template-columns: 1fr 350px; gap: 30px; }
+        
+        .menu-section { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h2 { color: #8b5e3c; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .item { display: flex; align-items: center; padding: 15px 0; border-bottom: 1px solid #f9f9f9; }
+        .item-img { width: 85px; height: 85px; background-color: #f0ece2; border-radius: 10px; object-fit: cover; flex-shrink: 0; border: 1px solid #ddd; }
+        .item-info { flex-grow: 1; margin-left: 20px; }
+        .item-info strong { display: block; font-size: 1.1em; }
+        .item-info small { color: #888; display: block; margin-top: 4px; }
+        .price { font-weight: bold; color: #8b5e3c; margin-right: 15px; font-size: 1.1em; }
+        
+        .add-btn { background-color: #8b5e3c; color: white; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-size: 1.2em; transition: 0.2s; }
+        .add-btn:hover { background-color: #e67e22; transform: scale(1.1); }
+
+        .cart-section { background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); height: fit-content; position: sticky; top: 20px; }
+        .cart-title { font-size: 1.6em; margin-bottom: 20px; font-weight: bold; color: #8b5e3c; display: block; border-bottom: 2px solid #8b5e3c; }
+        
+        #cart-items { list-style: none; padding: 0; margin-bottom: 20px; }
+        .cart-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd; font-size: 0.95em; }
+        
+        .remove-btn { background-color: #e74c3c; color: white; border: none; border-radius: 4px; padding: 2px 8px; cursor: pointer; font-size: 0.8em; margin-left: 10px; }
+        .remove-btn:hover { background-color: #c0392b; }
+
+        .total { font-weight: bold; font-size: 1.4em; color: #27ae60; text-align: right; margin-top: 15px; }
+        .checkout-btn { width: 100%; background-color: #8b5e3c; color: white; border: none; padding: 15px; border-radius: 8px; margin-top: 15px; cursor: pointer; font-size: 1em; font-weight: bold; text-transform: uppercase; }
+
+        @media (max-width: 850px) { 
+            .container { grid-template-columns: 1fr; } 
+            .cart-section { position: static; } 
+            .back-btn { top: 10px; left: 10px; padding: 5px 10px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="BAR ONDA DORO.html" class="back-btn">← Torna alla Home</a>
+    <h1>Onda d'Oro</h1>
+    <p>Drink ghiacciati e snack croccanti</p>
+</header>
+
+<div class="container">
+    <div class="menu-section">
+        
+        <h2>Sfizi & Snack</h2>
+
+        <div class="item">
+            <img src="patatine.jpg" alt="Patatine" class="item-img">
+            <div class="item-info">
+                <strong>Patatine Artigianali</strong>
+                <small>Classiche, Pepe Rosa o Lime e Zenzero</small>
+            </div>
+            <span class="price">€2.50</span>
+            <button class="add-btn" onclick="aggiungiAlCarrello('Patatine Artigianali', 2.50)">+</button>
+        </div>
+
+        <div class="item">
+            <img src="olive.jpg" alt="Olive" class="item-img">
+            <div class="item-info">
+                <strong>Olive Ascolane</strong>
+                <small>6 pezzi, servite calde e croccanti</small>
+            </div>
+            <span class="price">€4.50</span>
+            <button class="add-btn" onclick="aggiungiAlCarrello('Olive Ascolane', 4.50)">+</button>
+        </div>
+
+        <div class="item">
+            <img src="nachos.jpg" alt="Nachos" class="item-img">
+            <div class="item-info">
+                <strong>Nachos con Salsa</strong>
+                <small>Con salsa messicana piccante o formaggio fuso</small>
+            </div>
+            <span class="price">€5.00</span>
+            <button class="add-btn" onclick="aggiungiAlCarrello('Nachos con Salsa', 5.00)">+</button>
+        </div>
+
+        <div class="item">
+            <img src="mix_frutta_secca.jpg" alt="Mix" class="item-img">
+            <div class="item-info">
+                <strong>Mix Salato</strong>
+                <small>Arachidi, mandorle tostate e mais croccante</small>
+            </div>
+            <span class="price">€3.00</span>
+            <button class="add-btn" onclick="aggiungiAlCarrello('Mix Salato', 3.00)">+</button>
+        </div>
+
+        
+
+    </div>
+
+    <div class="cart-section">
+        <span class="cart-title">🍿 Il Tuo Ordine</span>
+        <ul id="cart-items"></ul>
+        <div class="total">Totale: €<span id="total-price">0.00</span></div>
+        <button class="checkout-btn" onclick="checkout()">Ordina Ora</button>
+    </div>
+</div>
+
+<script>
+    let carrello = [];
+    let totale = 0;
+
+    function aggiungiAlCarrello(nome, prezzo) {
+        carrello.push({ nome, prezzo });
+        totale += prezzo;
+        aggiornaInterfaccia();
+    }
+
+    function rimuoviDalCarrello(index) {
+        totale -= carrello[index].prezzo;
+        carrello.splice(index, 1);
+        aggiornaInterfaccia();
+    }
+
+    function aggiornaInterfaccia() {
+        const lista = document.getElementById('cart-items');
+        const totaleTesto = document.getElementById('total-price');
+        
+        lista.innerHTML = ''; 
+        
+        carrello.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.className = 'cart-item';
+            li.innerHTML = `
+                <div>
+                    <strong>${item.nome}</strong><br>
+                    <span>€${item.prezzo.toFixed(2)}</span>
+                </div>
+                <button class="remove-btn" onclick="rimuoviDalCarrello(${index})">Elimina</button>
+            `;
+            lista.appendChild(li);
+        });
+
+        if (totale < 0) totale = 0;
+        totaleTesto.innerText = totale.toFixed(2);
+    }
+
+    function checkout() {
+        if (carrello.length === 0) {
+            alert("Il carrello è vuoto! Scegli qualcosa da sgranocchiare.");
+        } else {
+            alert("Ordine inviato! Mettiamo subito in cottura i tuoi snack. Totale: €" + totale.toFixed(2));
+            carrello = [];
+            totale = 0;
+            aggiornaInterfaccia();
+        }
+    }
+</script>
+
+</body>
+</html>

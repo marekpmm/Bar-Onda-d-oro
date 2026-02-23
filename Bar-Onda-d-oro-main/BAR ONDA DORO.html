@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Onda d'oro | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6f4e37;
+            --secondary: #c49a6c;
+            --dark: #2d1b10;
+            --light: #fdfcfb;
+            --accent: #e67e22;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--light);
+            margin: 0;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Header con Gradiente Moderno */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: var(--light);
+            clip-path: ellipse(60% 50% at 50% 100%);
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 3.2rem; 
+            letter-spacing: -1px;
+            font-weight: 700;
+        }
+
+        header p { 
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.8;
+            margin-top: 10px; 
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Galleria Immagini con Effetto Hover Moderno */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 300px;
+            object-fit: cover; 
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Menu Grid Style "Card" */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .btn-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            color: var(--dark);
+            text-decoration: none;
+            padding: 35px 20px;
+            border-radius: 24px;
+            border: 1px solid rgba(0,0,0,0.05);
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .btn-menu:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(111, 78, 55, 0.2);
+        }
+
+        .icon { 
+            font-size: 2.5rem; 
+            margin-bottom: 15px; 
+            transition: transform 0.3s ease;
+        }
+
+        .btn-menu:hover .icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        /* Footer Moderno */
+        footer {
+            background-color: var(--dark);
+            color: #d1c4bc;
+            padding: 60px 20px 30px;
+            text-align: center;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-section h4 { 
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-section h4::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: var(--secondary);
+            margin: 8px auto 0;
+        }
+        
+        .social-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: white; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.2rem; }
+            .gallery-item { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bar Onda d'oro</h1>
+        <p>L'eccellenza in ogni sorso</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="gallery">
+            <img src="Gemini_Generated_Image_b3dg2lb3dg2lb3dg.png" alt="interno" class="gallery-item">
+            <img src="Gemini_Generated_Image_uymla1uymla1uyml.png" alt="esterno Bar Onda d'Oro" class="gallery-item">
+            <img src="Gemini_Generated_Image_ql1lf6ql1lf6ql1l.png" alt="caffe" class="gallery-item">
+        </div>
+
+        <div class="menu-grid">
+            <a href="gasp_git.html" class="btn-menu">
+                <span class="icon">☕</span>
+                <span>Caffetteria</span>
+            </a>
+            <a href="dolci.html" class="btn-menu">
+                <span class="icon">🥐</span>
+                <span>Pasticceria</span>
+            </a>
+            <a href="aperitivi.html" class="btn-menu">
+                <span class="icon">🍹</span>
+                <span>Aperitivi</span>
+            </a>
+            <a href="snack.html" class="btn-menu">
+                <span class="icon">🥪</span>
+                <span>Snack Bar</span>
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🕒 Orari di Apertura</h4>
+                <p>Lun - Sab: 07:00 - 20:00<br>Domenica: 08:00 - 13:00</p>
+            </div>
+            <div class="footer-section">
+                <h4>📍 La nostra Posizione</h4>
+                <p>Via Napoli<br>Genzano di Roma (RM)</p>
+            </div>
+            <div class="footer-section">
+                <h4>📱 Seguici sui Social</h4>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top: 50px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Bar Onda d'oro • Designed for Excellence</p>
+    </footer>
+
+</body>
+</html>
